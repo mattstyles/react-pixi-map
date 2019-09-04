@@ -3,8 +3,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Stage, Sprite } from '@inlet/react-pixi/dist/react-pixi.module'
 
-import { frame, el } from './setup'
-import { Map } from '../src'
+import { frame, el } from '../_common/setup'
+import { Map } from '../../src'
 
 const view = [window.innerWidth, window.innerHeight]
 const appOpts = {
