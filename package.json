@@ -1,20 +1,38 @@
 {
   "name": "react-pixi-map",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Renders tilemaps using @inlet/react-pixi",
+  "main": "lib/",
   "scripts": {
+    "clean": "rimraf lib",
+    "prebuild": "npm run clean",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm scripts/example.js"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint"
   },
   "author": "Matt Styles",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.3",
     "esm": "^3.2.25",
     "inquirer": "^7.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "speedrun": "^0.3.1"
+    "rimraf": "^3.0.0",
+    "speedrun": "^0.3.1",
+    "standard": "^14.1.0"
   },
   "dependencies": {
     "@inlet/react-pixi": "^1.1.0",
