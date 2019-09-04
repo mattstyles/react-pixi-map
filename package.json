@@ -1,6 +1,6 @@
 {
   "name": "react-pixi-map",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Renders tilemaps using @inlet/react-pixi",
   "main": "lib/",
   "scripts": {
@@ -13,7 +13,8 @@
   },
   "babel": {
     "presets": [
-      "@babel/preset-env"
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
   },
   "standard": {
@@ -25,6 +26,7 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.3",
     "esm": "^3.2.25",
     "inquirer": "^7.0.0",
