@@ -16,7 +16,7 @@ const data = [
   '0010'.split('').map(s => parseInt(s, 10)),
   '0100'.split('').map(s => parseInt(s, 10)),
   '0011'.split('').map(s => parseInt(s, 10)),
-  '0000'.split('').map(s => parseInt(s, 10)),
+  '0000'.split('').map(s => parseInt(s, 10))
 ]
 const dimensions = [data[0].length, data.length]
 

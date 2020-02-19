@@ -4,8 +4,8 @@ import { Container, Sprite } from '@inlet/react-pixi/dist/react-pixi.module'
 
 const iterate2d = (fn, dims, data) => {
   // @TODO avoid reallocation by creating only on initial render
-  let elems = []
-  const [ w, h ] = dims
+  const elems = []
+  const [w, h] = dims
 
   for (let y = 0; y < h; y++) {
     for (let x = 0; x < w; x++) {

@@ -37,7 +37,7 @@ const iterateBasenames = d => d.map(f => path.basename(f))
 
 const selectExample = examples => {
   if (!examples || !examples.length) {
-    return bail(err)
+    return bail('No examples found.')
   }
 
   return inquirer.prompt([{
