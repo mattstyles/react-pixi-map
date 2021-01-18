@@ -30,9 +30,12 @@
     "babel-eslint": "^10.0.3",
     "esm": "^3.2.25",
     "inquirer": "^7.0.0",
+    "lodash": "^4.17.15",
     "rimraf": "^3.0.0",
     "speedrun": "^1.0.0",
-    "standard": "^14.3.1"
+    "standard": "^14.3.1",
+    "stats.js": "^0.17.0",
+    "uuid": "^3.4.0"
   },
   "dependencies": {
     "@inlet/react-pixi": "^1.2.0",

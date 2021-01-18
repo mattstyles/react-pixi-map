@@ -3,7 +3,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Stage, Sprite } from '@inlet/react-pixi/dist/react-pixi.module'
 
-import { skelly, el } from '../common/setup'
+import { skelly, charb, el } from '../common/setup'
 import { Map } from '../../src'
 
 const view = [window.innerWidth, window.innerHeight]
@@ -13,7 +13,7 @@ const appOpts = {
 }
 const frameSize = [16, 16]
 const data = [
-  '0010'.split('').map(s => parseInt(s, 10)),
+  '1110'.split('').map(s => parseInt(s, 10)),
   '0100'.split('').map(s => parseInt(s, 10)),
   '0011'.split('').map(s => parseInt(s, 10)),
   '0000'.split('').map(s => parseInt(s, 10))
@@ -25,13 +25,16 @@ const renderFunc = (tile, x, y) => {
     return null
   }
 
+  const scale = frameSize[0] / charb[0].orig.width
+
   return (
     <Sprite
       key={`[${x}:${y}]`}
       x={x * frameSize[0]}
       y={y * frameSize[1]}
-      scale={1}
-      texture={skelly}
+      scale={scale}
+      tint='0xff0000'
+      texture={charb[0]}
     />
   )
 }

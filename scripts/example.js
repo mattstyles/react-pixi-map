@@ -25,12 +25,22 @@ const getDirectory = (file) => {
   })
 }
 
+const excludeDirectories = dir => {
+  const excludes = [
+    'common',
+    'assets'
+  ]
+
+  return !excludes.includes(path.basename(dir))
+}
+
 // Remove files (getDirectory returns false for a non-directory) and
 // directories beginning with '_'
 const filterDirectories = dirs => {
   return dirs
     .filter(d => d)
-    .filter(d => !/^_/.test(path.basename(d)))
+    .filter(excludeDirectories)
+    // .filter(d => !/^_/.test(path.basename(d)))
 }
 
 const iterateBasenames = d => d.map(f => path.basename(f))
